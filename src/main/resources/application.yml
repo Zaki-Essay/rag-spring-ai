@@ -1,0 +1,19 @@
+spring:
+  ai:
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334
+        use-tls: false
+        initialize-schema: true
+        collection-name: spring
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: nomic-embed-text
+      chat:
+        options:
+          model: mistral # you may use mistral for more lightweight model or llama3.2 for faster inference
+
+server:
+  port: 8000
